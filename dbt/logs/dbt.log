@@ -1,0 +1,622 @@
+[0m12:08:03.920493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C23D4F76E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C23D723EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C23A850440>]}
+
+
+============================== 12:08:03.926493 | a02bb25a-4b77-447b-bd05-17561fa78549 ==============================
+[0m12:08:03.926493 [info ] [MainThread]: Running with dbt=1.10.15
+[0m12:08:03.927493 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'target_path': 'None', 'log_format': 'default', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\apgra\\OneDrive\\MyProjects\\open-energy-pipeline\\dbt', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\apgra\\OneDrive\\MyProjects\\open-energy-pipeline\\dbt\\logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt debug', 'printer_width': '80', 'write_json': 'True'}
+[0m12:08:03.957013 [info ] [MainThread]: dbt version: 1.10.15
+[0m12:08:03.958013 [info ] [MainThread]: python version: 3.12.4
+[0m12:08:03.958013 [info ] [MainThread]: python path: C:\Users\apgra\AppData\Local\Programs\Python\Python312\python.exe
+[0m12:08:03.959071 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m12:08:04.088178 [info ] [MainThread]: Using profiles dir at C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt
+[0m12:08:04.089181 [info ] [MainThread]: Using profiles.yml file at C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\profiles.yml
+[0m12:08:04.089181 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\dbt_project.yml
+[0m12:08:04.093184 [info ] [MainThread]: adapter type: duckdb
+[0m12:08:04.093184 [info ] [MainThread]: adapter version: 1.10.0
+[0m12:08:04.193926 [info ] [MainThread]: Configuration:
+[0m12:08:04.193926 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:08:04.193926 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:08:04.209556 [info ] [MainThread]: Required dependencies:
+[0m12:08:04.209556 [debug] [MainThread]: Executing "git --help"
+[0m12:08:04.242376 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:08:04.242376 [debug] [MainThread]: STDERR: "b''"
+[0m12:08:04.242376 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:08:04.242376 [info ] [MainThread]: Connection:
+[0m12:08:04.242376 [info ] [MainThread]:   database: energy
+[0m12:08:04.242376 [info ] [MainThread]:   schema: main
+[0m12:08:04.252884 [info ] [MainThread]:   path: ../data/warehouse/energy.duckdb
+[0m12:08:04.252884 [info ] [MainThread]:   config_options: None
+[0m12:08:04.252884 [info ] [MainThread]:   extensions: None
+[0m12:08:04.252884 [info ] [MainThread]:   settings: {}
+[0m12:08:04.252884 [info ] [MainThread]:   external_root: .
+[0m12:08:04.252884 [info ] [MainThread]:   use_credential_provider: None
+[0m12:08:04.252884 [info ] [MainThread]:   attach: None
+[0m12:08:04.252884 [info ] [MainThread]:   filesystems: None
+[0m12:08:04.258270 [info ] [MainThread]:   remote: None
+[0m12:08:04.259283 [info ] [MainThread]:   plugins: None
+[0m12:08:04.259283 [info ] [MainThread]:   disable_transactions: False
+[0m12:08:04.260280 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m12:08:04.644576 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m12:08:07.788203 [debug] [MainThread]: Using duckdb connection "debug"
+[0m12:08:07.789205 [debug] [MainThread]: On debug: select 1 as id
+[0m12:08:07.789257 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:08:07.804898 [debug] [MainThread]: SQL status: OK in 0.026 seconds
+[0m12:08:07.804898 [debug] [MainThread]: On debug: Close
+[0m12:08:07.804898 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:08:07.804898 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:08:07.804898 [debug] [MainThread]: Command `dbt debug` succeeded at 12:08:07.804898 after 4.03 seconds
+[0m12:08:07.820523 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:08:07.820673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C23DA06D80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C23CE26720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C23EB396A0>]}
+[0m12:08:07.821676 [debug] [MainThread]: Flushing usage events
+[0m12:08:08.792663 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:08:26.600832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF588C5A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF55E4F710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5904B170>]}
+
+
+============================== 12:08:26.605960 | 54c2bbff-ee53-421b-9f7e-2cff6e0b0259 ==============================
+[0m12:08:26.605960 [info ] [MainThread]: Running with dbt=1.10.15
+[0m12:08:26.606964 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'write_json': 'True', 'invocation_command': 'dbt run', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\apgra\\OneDrive\\MyProjects\\open-energy-pipeline\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\apgra\\OneDrive\\MyProjects\\open-energy-pipeline\\dbt', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m12:08:26.915547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5AD79070>]}
+[0m12:08:26.989370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5AE84440>]}
+[0m12:08:26.992371 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m12:08:27.384303 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m12:08:27.384303 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:08:27.384303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5AE85D60>]}
+[0m12:08:30.336594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5AE84230>]}
+[0m12:08:30.428374 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\manifest.json
+[0m12:08:30.443994 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\semantic_manifest.json
+[0m12:08:30.476894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5B437E60>]}
+[0m12:08:30.476894 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 468 macros
+[0m12:08:30.476894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5B33CA40>]}
+[0m12:08:30.476894 [info ] [MainThread]: 
+[0m12:08:30.476894 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:08:30.476894 [info ] [MainThread]: 
+[0m12:08:30.476894 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:08:30.476894 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy'
+[0m12:08:30.476894 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy'
+[0m12:08:30.604061 [debug] [ThreadPool]: Using duckdb connection "list_energy"
+[0m12:08:30.604061 [debug] [ThreadPool]: Using duckdb connection "list_energy"
+[0m12:08:30.605064 [debug] [ThreadPool]: On list_energy: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "list_energy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"energy"'
+    
+  
+  
+[0m12:08:30.605064 [debug] [ThreadPool]: On list_energy: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "list_energy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"energy"'
+    
+  
+  
+[0m12:08:30.606062 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:30.606062 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:30.628065 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m12:08:30.628065 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m12:08:30.630064 [debug] [ThreadPool]: On list_energy: Close
+[0m12:08:30.631061 [debug] [ThreadPool]: On list_energy: Close
+[0m12:08:30.632061 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energy, now create_energy_main_core)
+[0m12:08:30.633062 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energy, now create_energy_main_staging)
+[0m12:08:30.633062 [debug] [ThreadPool]: Creating schema "database: "energy"
+schema: "main_core"
+"
+[0m12:08:30.634061 [debug] [ThreadPool]: Creating schema "database: "energy"
+schema: "main_staging"
+"
+[0m12:08:30.642067 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_core"
+[0m12:08:30.644060 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_staging"
+[0m12:08:30.645060 [debug] [ThreadPool]: On create_energy_main_core: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "create_energy_main_core"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='energy'
+        and type='sqlite'
+    
+  
+[0m12:08:30.645060 [debug] [ThreadPool]: On create_energy_main_staging: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "create_energy_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='energy'
+        and type='sqlite'
+    
+  
+[0m12:08:30.646062 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:08:30.647063 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:08:30.649064 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m12:08:30.649064 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m12:08:30.649064 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_core"
+[0m12:08:30.649064 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_staging"
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_core: BEGIN
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_staging: BEGIN
+[0m12:08:30.649064 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:08:30.649064 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m12:08:30.649064 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_core"
+[0m12:08:30.649064 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_staging"
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_core: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "create_energy_main_core"} */
+
+    
+    
+        create schema if not exists "energy"."main_core"
+    
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_staging: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "create_energy_main_staging"} */
+
+    
+    
+        create schema if not exists "energy"."main_staging"
+    
+[0m12:08:30.649064 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m12:08:30.649064 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_core: COMMIT
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_staging: COMMIT
+[0m12:08:30.649064 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_core"
+[0m12:08:30.649064 [debug] [ThreadPool]: Using duckdb connection "create_energy_main_staging"
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_core: COMMIT
+[0m12:08:30.649064 [debug] [ThreadPool]: On create_energy_main_staging: COMMIT
+[0m12:08:30.664741 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m12:08:30.664741 [debug] [ThreadPool]: On create_energy_main_core: Close
+[0m12:08:30.664741 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m12:08:30.664741 [debug] [ThreadPool]: On create_energy_main_staging: Close
+[0m12:08:30.664741 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_main_core'
+[0m12:08:30.680369 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_main_staging'
+[0m12:08:30.680369 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_core"
+[0m12:08:30.680369 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_staging"
+[0m12:08:30.680369 [debug] [ThreadPool]: On list_energy_main_core: BEGIN
+[0m12:08:30.680369 [debug] [ThreadPool]: On list_energy_main_staging: BEGIN
+[0m12:08:30.680369 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:30.680369 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:30.680369 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m12:08:30.680369 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m12:08:30.680369 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_core"
+[0m12:08:30.680369 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_staging"
+[0m12:08:30.680369 [debug] [ThreadPool]: On list_energy_main_core: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "list_energy_main_core"} */
+select
+      'energy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_core'
+    and lower(table_catalog) = 'energy'
+  
+[0m12:08:30.680369 [debug] [ThreadPool]: On list_energy_main_staging: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "list_energy_main_staging"} */
+select
+      'energy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_staging'
+    and lower(table_catalog) = 'energy'
+  
+[0m12:08:30.712016 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m12:08:30.712016 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m12:08:30.712016 [debug] [ThreadPool]: On list_energy_main_core: ROLLBACK
+[0m12:08:30.712016 [debug] [ThreadPool]: On list_energy_main_staging: ROLLBACK
+[0m12:08:30.712016 [debug] [ThreadPool]: Failed to rollback 'list_energy_main_core'
+[0m12:08:30.727659 [debug] [ThreadPool]: Failed to rollback 'list_energy_main_staging'
+[0m12:08:30.728338 [debug] [ThreadPool]: On list_energy_main_core: Close
+[0m12:08:30.728338 [debug] [ThreadPool]: On list_energy_main_staging: Close
+[0m12:08:30.730350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5B549670>]}
+[0m12:08:30.730350 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:30.731349 [debug] [MainThread]: On master: BEGIN
+[0m12:08:30.731349 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:08:30.732346 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m12:08:30.733346 [debug] [MainThread]: On master: COMMIT
+[0m12:08:30.733346 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:30.734347 [debug] [MainThread]: On master: COMMIT
+[0m12:08:30.734347 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:08:30.735348 [debug] [MainThread]: On master: Close
+[0m12:08:30.768513 [debug] [Thread-1 (]: Began running node model.open_energy_pipeline.stg_energy
+[0m12:08:30.768513 [info ] [Thread-1 (]: 1 of 2 START sql view model main_staging.stg_energy ............................ [RUN]
+[0m12:08:30.770513 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.open_energy_pipeline.stg_energy'
+[0m12:08:30.770513 [debug] [Thread-1 (]: Began compiling node model.open_energy_pipeline.stg_energy
+[0m12:08:30.773573 [debug] [Thread-1 (]: Writing injected SQL for node "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.773573 [debug] [Thread-1 (]: Began executing node model.open_energy_pipeline.stg_energy
+[0m12:08:30.818181 [debug] [Thread-1 (]: Writing runtime sql for node "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.818181 [debug] [Thread-1 (]: Using duckdb connection "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.818181 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: BEGIN
+[0m12:08:30.818181 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:08:30.818181 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.818181 [debug] [Thread-1 (]: Using duckdb connection "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.818181 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "model.open_energy_pipeline.stg_energy"} */
+
+  
+  create view "energy"."main_staging"."stg_energy__dbt_tmp" as (
+    select
+  cast(date as date) as date,
+  cast(region as varchar) as region,
+  cast(energy_mwh as double) as energy_mwh
+from "energy"."main"."raw_energy"
+  );
+
+[0m12:08:30.826857 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.834864 [debug] [Thread-1 (]: Using duckdb connection "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.834864 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "model.open_energy_pipeline.stg_energy"} */
+alter view "energy"."main_staging"."stg_energy__dbt_tmp" rename to "stg_energy"
+[0m12:08:30.836868 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.848258 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: COMMIT
+[0m12:08:30.849254 [debug] [Thread-1 (]: Using duckdb connection "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.849254 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: COMMIT
+[0m12:08:30.854358 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m12:08:30.861365 [debug] [Thread-1 (]: Using duckdb connection "model.open_energy_pipeline.stg_energy"
+[0m12:08:30.862365 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "model.open_energy_pipeline.stg_energy"} */
+
+      drop view if exists "energy"."main_staging"."stg_energy__dbt_backup" cascade
+    
+[0m12:08:30.863361 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.866358 [debug] [Thread-1 (]: On model.open_energy_pipeline.stg_energy: Close
+[0m12:08:30.868220 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5687F890>]}
+[0m12:08:30.868220 [info ] [Thread-1 (]: 1 of 2 OK created sql view model main_staging.stg_energy ....................... [[32mOK[0m in 0.10s]
+[0m12:08:30.868220 [debug] [Thread-1 (]: Finished running node model.open_energy_pipeline.stg_energy
+[0m12:08:30.868220 [debug] [Thread-3 (]: Began running node model.open_energy_pipeline.fact_energy_daily
+[0m12:08:30.868220 [info ] [Thread-3 (]: 2 of 2 START sql view model main_core.fact_energy_daily ........................ [RUN]
+[0m12:08:30.868220 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.open_energy_pipeline.fact_energy_daily'
+[0m12:08:30.868220 [debug] [Thread-3 (]: Began compiling node model.open_energy_pipeline.fact_energy_daily
+[0m12:08:30.868220 [debug] [Thread-3 (]: Writing injected SQL for node "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.868220 [debug] [Thread-3 (]: Began executing node model.open_energy_pipeline.fact_energy_daily
+[0m12:08:30.885442 [debug] [Thread-3 (]: Writing runtime sql for node "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.887451 [debug] [Thread-3 (]: Using duckdb connection "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.888457 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: BEGIN
+[0m12:08:30.889468 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m12:08:30.891468 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m12:08:30.892468 [debug] [Thread-3 (]: Using duckdb connection "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.892468 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "model.open_energy_pipeline.fact_energy_daily"} */
+
+  
+  create view "energy"."main_core"."fact_energy_daily__dbt_tmp" as (
+    select
+  date,
+  region,
+  sum(energy_mwh) as energy_mwh_daily
+from "energy"."main_staging"."stg_energy"
+group by 1, 2
+  );
+
+[0m12:08:30.894466 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.897467 [debug] [Thread-3 (]: Using duckdb connection "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.898566 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "model.open_energy_pipeline.fact_energy_daily"} */
+alter view "energy"."main_core"."fact_energy_daily__dbt_tmp" rename to "fact_energy_daily"
+[0m12:08:30.899864 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.901873 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: COMMIT
+[0m12:08:30.901873 [debug] [Thread-3 (]: Using duckdb connection "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.903380 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: COMMIT
+[0m12:08:30.907881 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m12:08:30.910876 [debug] [Thread-3 (]: Using duckdb connection "model.open_energy_pipeline.fact_energy_daily"
+[0m12:08:30.911876 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "model.open_energy_pipeline.fact_energy_daily"} */
+
+      drop view if exists "energy"."main_core"."fact_energy_daily__dbt_backup" cascade
+    
+[0m12:08:30.912999 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m12:08:30.912999 [debug] [Thread-3 (]: On model.open_energy_pipeline.fact_energy_daily: Close
+[0m12:08:30.912999 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '54c2bbff-ee53-421b-9f7e-2cff6e0b0259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF5C8FA240>]}
+[0m12:08:30.912999 [info ] [Thread-3 (]: 2 of 2 OK created sql view model main_core.fact_energy_daily ................... [[32mOK[0m in 0.04s]
+[0m12:08:30.912999 [debug] [Thread-3 (]: Finished running node model.open_energy_pipeline.fact_energy_daily
+[0m12:08:30.912999 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:30.912999 [debug] [MainThread]: On master: BEGIN
+[0m12:08:30.921578 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:08:30.922386 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m12:08:30.922386 [debug] [MainThread]: On master: COMMIT
+[0m12:08:30.922386 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:30.922386 [debug] [MainThread]: On master: COMMIT
+[0m12:08:30.927984 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:08:30.927984 [debug] [MainThread]: On master: Close
+[0m12:08:30.928983 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:08:30.929980 [debug] [MainThread]: Connection 'create_energy_main_core' was properly closed.
+[0m12:08:30.929980 [debug] [MainThread]: Connection 'create_energy_main_staging' was properly closed.
+[0m12:08:30.930982 [debug] [MainThread]: Connection 'list_energy_main_core' was properly closed.
+[0m12:08:30.930982 [debug] [MainThread]: Connection 'list_energy_main_staging' was properly closed.
+[0m12:08:30.931980 [debug] [MainThread]: Connection 'model.open_energy_pipeline.stg_energy' was properly closed.
+[0m12:08:30.931980 [debug] [MainThread]: Connection 'model.open_energy_pipeline.fact_energy_daily' was properly closed.
+[0m12:08:30.932981 [info ] [MainThread]: 
+[0m12:08:30.933981 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.46 seconds (0.46s).
+[0m12:08:30.934981 [debug] [MainThread]: Command end result
+[0m12:08:30.961197 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\manifest.json
+[0m12:08:30.964920 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\semantic_manifest.json
+[0m12:08:30.972922 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\run_results.json
+[0m12:08:30.973924 [info ] [MainThread]: 
+[0m12:08:30.973924 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:08:30.974925 [info ] [MainThread]: 
+[0m12:08:30.975922 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m12:08:30.976926 [debug] [MainThread]: Command `dbt run` succeeded at 12:08:30.976926 after 4.51 seconds
+[0m12:08:30.977627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF55E73F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF59652BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF59652EA0>]}
+[0m12:08:30.977627 [debug] [MainThread]: Flushing usage events
+[0m12:08:32.197443 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:08:42.499998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8EF915B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8ECF36D20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8EF4EA150>]}
+
+
+============================== 12:08:42.499998 | 9923d129-0de5-4d2f-aacc-5847156942f1 ==============================
+[0m12:08:42.499998 [info ] [MainThread]: Running with dbt=1.10.15
+[0m12:08:42.499998 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\apgra\\OneDrive\\MyProjects\\open-energy-pipeline\\dbt', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'log_format': 'default', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\apgra\\OneDrive\\MyProjects\\open-energy-pipeline\\dbt\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt test', 'printer_width': '80', 'target_path': 'None'}
+[0m12:08:42.805176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9923d129-0de5-4d2f-aacc-5847156942f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8EFDDD040>]}
+[0m12:08:42.876374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9923d129-0de5-4d2f-aacc-5847156942f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F1C058B0>]}
+[0m12:08:42.879374 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m12:08:43.261085 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m12:08:43.429781 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:08:43.429781 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:08:43.489618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9923d129-0de5-4d2f-aacc-5847156942f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F1B69D90>]}
+[0m12:08:43.603024 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\manifest.json
+[0m12:08:43.609149 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\semantic_manifest.json
+[0m12:08:43.659793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9923d129-0de5-4d2f-aacc-5847156942f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F23A5340>]}
+[0m12:08:43.659793 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 468 macros
+[0m12:08:43.659793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9923d129-0de5-4d2f-aacc-5847156942f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F2357800>]}
+[0m12:08:43.669947 [info ] [MainThread]: 
+[0m12:08:43.669947 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:08:43.669947 [info ] [MainThread]: 
+[0m12:08:43.673297 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:08:43.675308 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_main_staging'
+[0m12:08:43.676306 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_main_core'
+[0m12:08:43.789958 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_staging"
+[0m12:08:43.789958 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_core"
+[0m12:08:43.790957 [debug] [ThreadPool]: On list_energy_main_staging: BEGIN
+[0m12:08:43.790957 [debug] [ThreadPool]: On list_energy_main_core: BEGIN
+[0m12:08:43.791959 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:43.791959 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:43.821737 [debug] [ThreadPool]: SQL status: OK in 0.031 seconds
+[0m12:08:43.821737 [debug] [ThreadPool]: SQL status: OK in 0.031 seconds
+[0m12:08:43.821737 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_staging"
+[0m12:08:43.821737 [debug] [ThreadPool]: Using duckdb connection "list_energy_main_core"
+[0m12:08:43.821737 [debug] [ThreadPool]: On list_energy_main_staging: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "list_energy_main_staging"} */
+select
+      'energy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_staging'
+    and lower(table_catalog) = 'energy'
+  
+[0m12:08:43.821737 [debug] [ThreadPool]: On list_energy_main_core: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "connection_name": "list_energy_main_core"} */
+select
+      'energy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_core'
+    and lower(table_catalog) = 'energy'
+  
+[0m12:08:43.837367 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m12:08:43.837367 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m12:08:43.837367 [debug] [ThreadPool]: On list_energy_main_staging: ROLLBACK
+[0m12:08:43.837367 [debug] [ThreadPool]: On list_energy_main_core: ROLLBACK
+[0m12:08:43.853183 [debug] [ThreadPool]: Failed to rollback 'list_energy_main_staging'
+[0m12:08:43.854183 [debug] [ThreadPool]: Failed to rollback 'list_energy_main_core'
+[0m12:08:43.855181 [debug] [ThreadPool]: On list_energy_main_staging: Close
+[0m12:08:43.856180 [debug] [ThreadPool]: On list_energy_main_core: Close
+[0m12:08:43.858179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9923d129-0de5-4d2f-aacc-5847156942f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F1E90A40>]}
+[0m12:08:43.858179 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:43.859184 [debug] [MainThread]: On master: BEGIN
+[0m12:08:43.860183 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:08:43.861182 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m12:08:43.862184 [debug] [MainThread]: On master: COMMIT
+[0m12:08:43.863180 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:43.863180 [debug] [MainThread]: On master: COMMIT
+[0m12:08:43.864180 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:08:43.865181 [debug] [MainThread]: On master: Close
+[0m12:08:43.870319 [debug] [Thread-1 (]: Began running node test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b
+[0m12:08:43.871319 [debug] [Thread-2 (]: Began running node test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e
+[0m12:08:43.871319 [debug] [Thread-3 (]: Began running node test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19
+[0m12:08:43.872317 [debug] [Thread-4 (]: Began running node test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5
+[0m12:08:43.873317 [info ] [Thread-1 (]: 1 of 4 START test not_null_fact_energy_daily_date .............................. [RUN]
+[0m12:08:43.874319 [info ] [Thread-2 (]: 2 of 4 START test not_null_fact_energy_daily_region ............................ [RUN]
+[0m12:08:43.874319 [info ] [Thread-3 (]: 3 of 4 START test not_null_stg_energy_date ..................................... [RUN]
+[0m12:08:43.875323 [info ] [Thread-4 (]: 4 of 4 START test not_null_stg_energy_region ................................... [RUN]
+[0m12:08:43.877320 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b'
+[0m12:08:43.878319 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e'
+[0m12:08:43.879320 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19'
+[0m12:08:43.880320 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5'
+[0m12:08:43.881321 [debug] [Thread-1 (]: Began compiling node test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b
+[0m12:08:43.881321 [debug] [Thread-2 (]: Began compiling node test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e
+[0m12:08:43.882321 [debug] [Thread-3 (]: Began compiling node test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19
+[0m12:08:43.883318 [debug] [Thread-4 (]: Began compiling node test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5
+[0m12:08:43.903584 [debug] [Thread-1 (]: Writing injected SQL for node "test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b"
+[0m12:08:43.908583 [debug] [Thread-2 (]: Writing injected SQL for node "test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e"
+[0m12:08:43.916110 [debug] [Thread-3 (]: Writing injected SQL for node "test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19"
+[0m12:08:43.924108 [debug] [Thread-4 (]: Writing injected SQL for node "test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5"
+[0m12:08:43.927107 [debug] [Thread-4 (]: Began executing node test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5
+[0m12:08:43.928109 [debug] [Thread-3 (]: Began executing node test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19
+[0m12:08:43.948109 [debug] [Thread-1 (]: Began executing node test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b
+[0m12:08:43.958106 [debug] [Thread-4 (]: Writing runtime sql for node "test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5"
+[0m12:08:43.961235 [debug] [Thread-3 (]: Writing runtime sql for node "test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19"
+[0m12:08:43.962237 [debug] [Thread-2 (]: Began executing node test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e
+[0m12:08:43.965236 [debug] [Thread-1 (]: Writing runtime sql for node "test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b"
+[0m12:08:43.970239 [debug] [Thread-2 (]: Writing runtime sql for node "test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e"
+[0m12:08:43.971240 [debug] [Thread-3 (]: Using duckdb connection "test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19"
+[0m12:08:43.972237 [debug] [Thread-4 (]: Using duckdb connection "test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5"
+[0m12:08:43.973237 [debug] [Thread-3 (]: On test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19: BEGIN
+[0m12:08:43.974241 [debug] [Thread-4 (]: On test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5: BEGIN
+[0m12:08:43.975238 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m12:08:43.975238 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m12:08:43.977240 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m12:08:43.977240 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m12:08:43.977240 [debug] [Thread-3 (]: Using duckdb connection "test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19"
+[0m12:08:43.977240 [debug] [Thread-4 (]: Using duckdb connection "test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5"
+[0m12:08:43.977240 [debug] [Thread-3 (]: On test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from "energy"."main_staging"."stg_energy"
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:08:43.977240 [debug] [Thread-4 (]: On test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select region
+from "energy"."main_staging"."stg_energy"
+where region is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:08:43.977240 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m12:08:43.977240 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m12:08:43.977240 [debug] [Thread-3 (]: On test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19: ROLLBACK
+[0m12:08:43.977240 [debug] [Thread-4 (]: On test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5: ROLLBACK
+[0m12:08:43.977240 [debug] [Thread-3 (]: Failed to rollback 'test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19'
+[0m12:08:43.977240 [debug] [Thread-4 (]: Failed to rollback 'test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5'
+[0m12:08:43.977240 [debug] [Thread-3 (]: On test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19: Close
+[0m12:08:43.992918 [debug] [Thread-4 (]: On test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5: Close
+[0m12:08:43.992918 [info ] [Thread-3 (]: 3 of 4 PASS not_null_stg_energy_date ........................................... [[32mPASS[0m in 0.11s]
+[0m12:08:43.992918 [info ] [Thread-4 (]: 4 of 4 PASS not_null_stg_energy_region ......................................... [[32mPASS[0m in 0.11s]
+[0m12:08:43.992918 [debug] [Thread-3 (]: Finished running node test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19
+[0m12:08:43.992918 [debug] [Thread-4 (]: Finished running node test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5
+[0m12:08:43.992918 [debug] [Thread-1 (]: Using duckdb connection "test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b"
+[0m12:08:43.992918 [debug] [Thread-2 (]: Using duckdb connection "test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e"
+[0m12:08:43.992918 [debug] [Thread-1 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b: BEGIN
+[0m12:08:43.992918 [debug] [Thread-2 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e: BEGIN
+[0m12:08:43.992918 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:08:43.992918 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:08:43.992918 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m12:08:44.008542 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m12:08:44.008542 [debug] [Thread-1 (]: Using duckdb connection "test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b"
+[0m12:08:44.009868 [debug] [Thread-2 (]: Using duckdb connection "test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e"
+[0m12:08:44.009868 [debug] [Thread-1 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from "energy"."main_core"."fact_energy_daily"
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:08:44.010883 [debug] [Thread-2 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e: /* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "open_energy_pipeline", "target_name": "dev", "node_id": "test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select region
+from "energy"."main_core"."fact_energy_daily"
+where region is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:08:44.049171 [debug] [Thread-1 (]: SQL status: OK in 0.048 seconds
+[0m12:08:44.049171 [debug] [Thread-2 (]: SQL status: OK in 0.048 seconds
+[0m12:08:44.049171 [debug] [Thread-1 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b: ROLLBACK
+[0m12:08:44.049171 [debug] [Thread-2 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e: ROLLBACK
+[0m12:08:44.064810 [debug] [Thread-1 (]: Failed to rollback 'test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b'
+[0m12:08:44.064810 [debug] [Thread-2 (]: Failed to rollback 'test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e'
+[0m12:08:44.064810 [debug] [Thread-1 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b: Close
+[0m12:08:44.064810 [debug] [Thread-2 (]: On test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e: Close
+[0m12:08:44.064810 [info ] [Thread-1 (]: 1 of 4 PASS not_null_fact_energy_daily_date .................................... [[32mPASS[0m in 0.19s]
+[0m12:08:44.064810 [info ] [Thread-2 (]: 2 of 4 PASS not_null_fact_energy_daily_region .................................. [[32mPASS[0m in 0.19s]
+[0m12:08:44.064810 [debug] [Thread-1 (]: Finished running node test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b
+[0m12:08:44.064810 [debug] [Thread-2 (]: Finished running node test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e
+[0m12:08:44.064810 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:44.064810 [debug] [MainThread]: On master: BEGIN
+[0m12:08:44.064810 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:08:44.064810 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m12:08:44.080442 [debug] [MainThread]: On master: COMMIT
+[0m12:08:44.080442 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:08:44.081759 [debug] [MainThread]: On master: COMMIT
+[0m12:08:44.082781 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:08:44.083783 [debug] [MainThread]: On master: Close
+[0m12:08:44.084800 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:08:44.084800 [debug] [MainThread]: Connection 'list_energy_main_staging' was properly closed.
+[0m12:08:44.085804 [debug] [MainThread]: Connection 'list_energy_main_core' was properly closed.
+[0m12:08:44.085804 [debug] [MainThread]: Connection 'test.open_energy_pipeline.not_null_fact_energy_daily_date.983ab2ee9b' was properly closed.
+[0m12:08:44.085804 [debug] [MainThread]: Connection 'test.open_energy_pipeline.not_null_fact_energy_daily_region.c2c9d27f9e' was properly closed.
+[0m12:08:44.086803 [debug] [MainThread]: Connection 'test.open_energy_pipeline.not_null_stg_energy_date.2c80140e19' was properly closed.
+[0m12:08:44.087685 [debug] [MainThread]: Connection 'test.open_energy_pipeline.not_null_stg_energy_region.893c3d25d5' was properly closed.
+[0m12:08:44.088430 [info ] [MainThread]: 
+[0m12:08:44.090161 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 0.42 seconds (0.42s).
+[0m12:08:44.092116 [debug] [MainThread]: Command end result
+[0m12:08:44.127775 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\manifest.json
+[0m12:08:44.133968 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\semantic_manifest.json
+[0m12:08:44.144970 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\apgra\OneDrive\MyProjects\open-energy-pipeline\dbt\target\run_results.json
+[0m12:08:44.145970 [info ] [MainThread]: 
+[0m12:08:44.145970 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:08:44.146972 [info ] [MainThread]: 
+[0m12:08:44.147973 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m12:08:44.150367 [debug] [MainThread]: Command `dbt test` succeeded at 12:08:44.149366 after 1.79 seconds
+[0m12:08:44.151369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F06A2AB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F22BAF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8F1E6B320>]}
+[0m12:08:44.152375 [debug] [MainThread]: Flushing usage events
+[0m12:08:45.014409 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,15 @@
+name: "open_energy_pipeline"
+version: "0.1.0"
+config-version: 2
+
+profile: "open_energy_pipeline"
+
+model-paths: ["models"]
+
+models:
+  open_energy_pipeline:
+    +materialized: view
+    staging:
+      +schema: staging
+    core:
+      +schema: core

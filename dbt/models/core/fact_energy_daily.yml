@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fact_energy_daily
+    columns:
+      - name: date
+        tests: [not_null]
+      - name: region
+        tests: [not_null]

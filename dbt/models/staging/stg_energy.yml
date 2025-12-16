@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_energy
+    columns:
+      - name: date
+        tests: [not_null]
+      - name: region
+        tests: [not_null]

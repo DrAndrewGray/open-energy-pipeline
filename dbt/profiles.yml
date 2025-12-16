@@ -1,0 +1,7 @@
+open_energy_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/warehouse/energy.duckdb
+      threads: 4
